@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data Requests — Unashamed</title>
+<style>
+:root {
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --bg: #FAF8F3;
+  --surface: #FFFFFF;
+  --surface-2: #F3EFE6;
+  --border: #E7E1D3;
+  --text: #20261F;
+  --text-2: #4A4A40;
+  --muted: #6B6759;
+
+  --primary: #15754F;
+  --primary-d: #0A3B28;
+  --accent: #D4A64A;
+  --link: #0A3B28;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12140F;
+    --surface: #1A1D16;
+    --surface-2: #23271D;
+    --border: #333726;
+    --text: #EDEBE1;
+    --text-2: #C3C0B2;
+    --muted: #918D7C;
+    --primary: #3FAE81;
+    --primary-d: #63C79B;
+    --accent: #E8C374;
+    --link: #63C79B;
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--link); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+header.hero {
+  background: linear-gradient(135deg, var(--primary), var(--primary-d));
+  color: #fff;
+  padding: 48px 24px 40px;
+}
+header.hero .wrap { max-width: 720px; margin: 0 auto; }
+.kicker {
+  font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(255,255,255,0.75); margin-bottom: 10px;
+}
+header.hero h1 { font-size: 2rem; font-weight: 800; margin: 0 0 8px; letter-spacing: -0.02em; }
+header.hero p.lede { margin: 0; color: rgba(255,255,255,0.85); font-size: 0.95rem; }
+nav.top { margin-top: 22px; display: flex; gap: 18px; flex-wrap: wrap; }
+nav.top a {
+  color: #fff; text-decoration: none; font-size: 0.88rem; font-weight: 600;
+  padding: 6px 0; border-bottom: 2px solid rgba(255,255,255,0.35);
+}
+nav.top a.active { border-bottom-color: var(--accent); }
+
+main { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+h2 {
+  font-size: 1.15rem; font-weight: 700; margin: 40px 0 12px;
+  padding-bottom: 8px; border-bottom: 1px solid var(--border);
+}
+h2:first-of-type { margin-top: 0; }
+p { margin: 0 0 14px; color: var(--text-2); }
+ul, ol { margin: 0 0 14px; padding-left: 22px; color: var(--text-2); }
+li { margin-bottom: 6px; }
+strong { color: var(--text); }
+
+.callout {
+  background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--primary);
+  border-radius: 8px; padding: 14px 18px; margin: 18px 0; font-size: 0.93rem;
+}
+.callout p:last-child { margin-bottom: 0; }
+
+.card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+  padding: 20px 22px; margin: 16px 0;
+}
+.card h3 { margin: 0 0 6px; font-size: 1rem; }
+.card p { margin: 0; }
+
+.btn {
+  display: inline-block; margin-top: 6px; padding: 11px 20px; border-radius: 10px;
+  background: var(--primary); color: #fff; text-decoration: none; font-weight: 700; font-size: 0.92rem;
+}
+
+footer.colophon {
+  max-width: 720px; margin: 0 auto; padding: 0 24px 60px;
+  font-size: 0.85rem; color: var(--muted);
+}
+footer.colophon a { color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">Unashamed</div>
+    <h1>Data Requests</h1>
+    <p class="lede">Last updated: September 18, 2026</p>
+    <nav class="top">
+      <a href="index.html">Overview</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="data-request.html" class="active">Data Requests</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<p>You can request access to, an export of, or deletion of your Unashamed data at any time — whether or not you still have the app installed.</p>
+
+<div class="card">
+  <h3>How to request</h3>
+  <p>Email us from the address associated with your Unashamed account, and tell us which of the following you'd like:</p>
+  <ul style="margin-top:10px;">
+    <li><strong>Access / export</strong> — a copy of the personal data we hold about you</li>
+    <li><strong>Correction</strong> — fix inaccurate information on your account</li>
+    <li><strong>Deletion</strong> — permanently delete your account and associated personal data</li>
+  </ul>
+  <a class="btn" href="mailto:unashamedapp@gmail.com?subject=Unashamed%20Data%20Request">Email unashamedapp@gmail.com</a>
+</div>
+
+<h2>What Happens When You Request Deletion</h2>
+<p>Once we verify the request came from you (by replying from your account's registered email), we delete:</p>
+<ul>
+  <li>Your account and login credentials</li>
+  <li>Your streak history, reset logs, urge logs, and trigger journal</li>
+  <li>Your accountability partner connections</li>
+  <li>Your community posts, comments, and circle memberships</li>
+  <li>Your flagged-app and time-limit settings</li>
+</ul>
+<div class="callout">
+  <p>We may retain a limited record where we're legally required to (for example, if your account is the subject of an open abuse report at the time of your request), and we'll tell you if that applies to your specific request. Everything else is deleted, not just deactivated.</p>
+</div>
+
+<h2>How Long It Takes</h2>
+<p>We aim to complete access, correction, and deletion requests within <strong>30 days</strong> of verifying your request. If it'll take longer for any reason, we'll let you know.</p>
+
+<h2>Deleting the App vs. Deleting Your Data</h2>
+<p>Uninstalling the app from your phone does <strong>not</strong> delete your account or data from our servers — it only removes the app itself. To actually delete your data, please send a deletion request as described above.</p>
+
+<h2>Contact</h2>
+<p>For any question about this process, email <a href="mailto:unashamedapp@gmail.com">unashamedapp@gmail.com</a>.</p>
+
+</main>
+
+<footer class="colophon">
+  <p>Unashamed — <a href="index.html">Overview</a> · <a href="privacy.html">Privacy Policy</a> · <a href="data-request.html">Data Requests</a></p>
+</footer>
+
+</body>
+</html>

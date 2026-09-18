@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Unashamed</title>
+<style>
+:root {
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --bg: #FAF8F3;
+  --surface: #FFFFFF;
+  --surface-2: #F3EFE6;
+  --border: #E7E1D3;
+  --text: #20261F;
+  --text-2: #4A4A40;
+  --muted: #6B6759;
+
+  --primary: #15754F;
+  --primary-d: #0A3B28;
+  --accent: #D4A64A;
+  --link: #0A3B28;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12140F;
+    --surface: #1A1D16;
+    --surface-2: #23271D;
+    --border: #333726;
+    --text: #EDEBE1;
+    --text-2: #C3C0B2;
+    --muted: #918D7C;
+    --primary: #3FAE81;
+    --primary-d: #63C79B;
+    --accent: #E8C374;
+    --link: #63C79B;
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--link); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+header.hero {
+  background: linear-gradient(135deg, var(--primary), var(--primary-d));
+  color: #fff;
+  padding: 48px 24px 40px;
+}
+header.hero .wrap { max-width: 720px; margin: 0 auto; }
+.kicker {
+  font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(255,255,255,0.75); margin-bottom: 10px;
+}
+header.hero h1 { font-size: 2rem; font-weight: 800; margin: 0 0 8px; letter-spacing: -0.02em; }
+header.hero p.lede { margin: 0; color: rgba(255,255,255,0.85); font-size: 0.95rem; }
+nav.top { margin-top: 22px; display: flex; gap: 18px; flex-wrap: wrap; }
+nav.top a {
+  color: #fff; text-decoration: none; font-size: 0.88rem; font-weight: 600;
+  padding: 6px 0; border-bottom: 2px solid rgba(255,255,255,0.35);
+}
+nav.top a.active { border-bottom-color: var(--accent); }
+
+main { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+h2 {
+  font-size: 1.15rem; font-weight: 700; margin: 40px 0 12px;
+  padding-bottom: 8px; border-bottom: 1px solid var(--border);
+}
+h2:first-of-type { margin-top: 0; }
+p { margin: 0 0 14px; color: var(--text-2); }
+ul { margin: 0 0 14px; padding-left: 22px; color: var(--text-2); }
+li { margin-bottom: 6px; }
+strong { color: var(--text); }
+
+.callout {
+  background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--primary);
+  border-radius: 8px; padding: 14px 18px; margin: 18px 0; font-size: 0.93rem;
+}
+.callout p:last-child { margin-bottom: 0; }
+
+table { border-collapse: collapse; width: 100%; margin: 14px 0 20px; font-size: 0.92rem; }
+th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+th { color: var(--text); font-weight: 700; width: 34%; }
+td { color: var(--text-2); }
+
+footer.colophon {
+  max-width: 720px; margin: 0 auto; padding: 0 24px 60px;
+  font-size: 0.85rem; color: var(--muted);
+}
+footer.colophon a { color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">Unashamed</div>
+    <h1>Privacy Policy</h1>
+    <p class="lede">Last updated: September 18, 2026</p>
+    <nav class="top">
+      <a href="index.html">Overview</a>
+      <a href="privacy.html" class="active">Privacy Policy</a>
+      <a href="data-request.html">Data Requests</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<p>Unashamed ("we", "our", "the app") helps people work through compulsive pornography use through self-guided tools, an accountability partner, and small peer communities. This page explains what information the app collects, why, and who can see it.</p>
+
+<div class="callout">
+  <p><strong>The short version:</strong> we only collect what the app's features actually need to work. We don't run ads, we don't have trackers, and we never sell your data. Anything related to your recovery — your streak, journal, and urge logs — is visible only to you unless you explicitly choose to share it (e.g. with an accountability partner).</p>
+</div>
+
+<h2>Information We Collect</h2>
+<table>
+  <tr><th>Account information</th><td>Your email address and password (your password is never stored in readable form — it's handled by our authentication provider, Supabase). Optionally, a profile photo.</td></tr>
+  <tr><th>Recovery data</th><td>Your streak history, reset logs, urge/panic-button logs, and trigger journal entries.</td></tr>
+  <tr><th>Accountability data</th><td>Your connection to an accountability partner (if you set one up), and any protection status you choose to share with them.</td></tr>
+  <tr><th>Community data</th><td>Circles you join or create, and any posts, comments, or reports you submit. Community participation uses an anonymous handle, not your real name.</td></tr>
+  <tr><th>Blocking &amp; protection data</th><td>Apps you flag for blocking and time limits you set. On Android, this list is used on-device to detect when a flagged app is opened; only the fact that it was opened (not what you did inside it) may be logged, and only if you've connected an accountability partner.</td></tr>
+  <tr><th>Device security</th><td>Your PIN and biometric lock are stored securely on your device only — we never receive or store them.</td></tr>
+</table>
+
+<h2>How We Use Your Information</h2>
+<ul>
+  <li>To provide the app's core features: tracking your streak, enforcing blocking you've turned on, and running the accountability and community features.</li>
+  <li>To keep your account secure and let you sign in.</li>
+  <li>To respond to support requests you send us.</li>
+</ul>
+<p>We do not use your information for advertising, and we do not sell or rent it to third parties.</p>
+
+<h2>Who Can See Your Information</h2>
+<ul>
+  <li><strong>You</strong> always have full access to your own data.</li>
+  <li><strong>An accountability partner</strong> you've explicitly connected with can see the specific status you've agreed to share (for example, whether protection is active, or a flagged-app event) — never your journal or private notes.</li>
+  <li><strong>Members of a community circle</strong> you've joined can see posts and comments you make in that circle, under your anonymous handle.</li>
+  <li><strong>We</strong> (the app's operators) can access data only as needed to run the service, investigate abuse reports, or respond to a legal request.</li>
+</ul>
+
+<h2>Where Your Data Is Stored</h2>
+<p>Your data is stored with Supabase, a third-party cloud database and authentication provider, and — for images such as profile photos — Bunny.net, a content delivery provider. Both providers encrypt data in transit. Access to your data within our database is restricted by row-level security rules, so, for example, another user cannot query your private journal entries directly.</p>
+
+<h2>Data Retention</h2>
+<p>We keep your data for as long as your account is active. If you request deletion (see our <a href="data-request.html">Data Requests</a> page), we delete your account and associated personal data, except where we're required to retain something for a legitimate legal or safety reason (for example, a moderation report already filed against your account).</p>
+
+<h2>Children's Privacy</h2>
+<p>Unashamed is intended for users aged 17 and older, consistent with the app's Terms &amp; Conditions. We do not knowingly collect information from children under 17.</p>
+
+<h2>Your Rights &amp; Choices</h2>
+<p>You can access, export, or delete your data at any time. See our <a href="data-request.html">Data Requests</a> page for how.</p>
+
+<h2>Changes to This Policy</h2>
+<p>We may update this policy as the app evolves. If we make a material change, we'll update the "Last updated" date above.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy? Reach us at <a href="mailto:unashamedapp@gmail.com">unashamedapp@gmail.com</a>.</p>
+
+</main>
+
+<footer class="colophon">
+  <p>Unashamed — <a href="index.html">Overview</a> · <a href="privacy.html">Privacy Policy</a> · <a href="data-request.html">Data Requests</a></p>
+</footer>
+
+</body>
+</html>

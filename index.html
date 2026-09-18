@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unashamed — Legal &amp; Privacy</title>
+<style>
+:root {
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --bg: #FAF8F3;
+  --surface: #FFFFFF;
+  --border: #E7E1D3;
+  --text: #20261F;
+  --text-2: #4A4A40;
+  --muted: #6B6759;
+
+  --primary: #15754F;
+  --primary-d: #0A3B28;
+  --accent: #D4A64A;
+  --link: #0A3B28;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12140F;
+    --surface: #1A1D16;
+    --border: #333726;
+    --text: #EDEBE1;
+    --text-2: #C3C0B2;
+    --muted: #918D7C;
+    --primary: #3FAE81;
+    --primary-d: #63C79B;
+    --accent: #E8C374;
+    --link: #63C79B;
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+.wrap { max-width: 480px; width: 100%; text-align: center; }
+.badge {
+  width: 56px; height: 56px; margin: 0 auto 20px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-d));
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent); font-size: 26px;
+}
+h1 { font-size: 1.7rem; font-weight: 800; margin: 0 0 10px; letter-spacing: -0.02em; }
+p.lede { color: var(--text-2); margin: 0 0 32px; font-size: 0.98rem; }
+
+.links { display: grid; gap: 12px; text-align: left; }
+.links a {
+  display: block; background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+  padding: 16px 18px; text-decoration: none; color: var(--text);
+}
+.links a .name { font-weight: 700; font-size: 1rem; }
+.links a .desc { color: var(--muted); font-size: 0.85rem; margin-top: 3px; }
+
+footer { margin-top: 36px; font-size: 0.82rem; color: var(--muted); }
+footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="badge">🌱</div>
+    <h1>Unashamed</h1>
+    <p class="lede">Legal and privacy information for the Unashamed app.</p>
+    <div class="links">
+      <a href="privacy.html">
+        <div class="name">Privacy Policy</div>
+        <div class="desc">What we collect, why, and who can see it.</div>
+      </a>
+      <a href="data-request.html">
+        <div class="name">Data Requests</div>
+        <div class="desc">Access, export, or delete your account and data.</div>
+      </a>
+    </div>
+    <footer>
+      <p>Questions? <a href="mailto:unashamedapp@gmail.com">unashamedapp@gmail.com</a></p>
+    </footer>
+  </div>
+</body>
+</html>
