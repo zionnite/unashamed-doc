@@ -160,6 +160,18 @@ section.alt { background: var(--surface-2); }
 .store-badge .label .small { display: block; font-size: 0.68rem; opacity: 0.8; }
 .store-badge .label .big { display: block; font-size: 0.98rem; font-weight: 700; }
 
+/* FAQ */
+.faq { max-width: 720px; margin: 0 auto; display: grid; gap: 12px; }
+.faq details { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 4px 20px; }
+.faq summary {
+  cursor: pointer; font-weight: 700; font-size: 0.98rem; padding: 16px 0; list-style: none;
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-size: 1.3rem; color: var(--muted); flex: 0 0 auto; }
+.faq details[open] summary::after { content: "\2212"; }
+.faq details p { margin: 0 0 16px; color: var(--text-2); font-size: 0.92rem; }
+
 /* Footer */
 footer.site { border-top: 1px solid var(--border); padding: 40px 24px 32px; }
 footer.site .row { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center; max-width: 1080px; margin: 0 auto; }
@@ -181,6 +193,7 @@ footer.site .copy { color: var(--muted); font-size: 0.82rem; text-align: center;
       <a href="index.html#features">Features</a>
       <a href="index.html#how">How it works</a>
       <a href="parental.html">For Parents</a>
+      <a href="#faq">FAQ</a>
       <a href="index.html#privacy">Privacy</a>
     </nav>
     <a class="cta-small" href="#download">Download</a>
@@ -239,6 +252,40 @@ footer.site .copy { color: var(--muted); font-size: 0.82rem; text-align: center;
         <h3>One plan, the whole family</h3>
         <p>A single family subscription covers every linked child — no per-child billing to manage.</p>
       </div>
+      <div class="card">
+        <div class="icon">🔐</div>
+        <h3>Can't be deleted or force-stopped</h3>
+        <p>Turn on the strongest protection tier and the app can't be force-stopped or uninstalled from the child's phone — enforced by the operating system itself, not a setting inside our app.</p>
+      </div>
+      <div class="card">
+        <div class="icon">⛔</div>
+        <h3>Approve new apps before they're installed</h3>
+        <p>Lock new app installs on the child's phone until you say otherwise — a new workaround can't be downloaded in the first place.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="strongest">
+    <div class="section-head">
+      <div class="kicker">Going further</div>
+      <h2>The strongest protection, and what it takes to turn on</h2>
+      <p>This is a deliberate, one-time extra step — not something that's on by default for every linked child.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">🤖</div>
+        <div>
+          <h3>Android</h3>
+          <p>Set the phone up fresh through a short factory-reset-and-scan step during device setup. Once done, Force Stop and Uninstall are genuinely greyed out by Android itself — confirmed on real hardware, not just in settings.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num">🍎</div>
+        <div>
+          <h3>iPhone</h3>
+          <p>Requires the child's device to already be set up as a child account under your Apple ID (Family Sharing), using your Screen Time passcode to authorize it. The app can then block its own deletion and new installs the same way.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -281,6 +328,51 @@ footer.site .copy { color: var(--muted); font-size: 0.82rem; text-align: center;
         anything Apple keeps private to the device itself is outside what any app —
         ours included — can remotely see or enforce.
       </p>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="section-head">
+      <div class="kicker">Questions</div>
+      <h2>Frequently asked</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Is this spyware — can I read their messages?</summary>
+        <p>No. There's no message, photo, or browsing-history access. You get a specific, visible set of controls: app blocks, time limits, bedtime blocks, a study timetable, and app-usage insight — nothing beyond that.</p>
+      </details>
+      <details>
+        <summary>Does my child know I'm linked to their account?</summary>
+        <p>Yes, always. Linking happens through an invite your child accepts themselves, and every restriction you set shows up clearly as "set by parent" in their own app.</p>
+      </details>
+      <details>
+        <summary>Can my child remove a restriction I set?</summary>
+        <p>No. A parent-set block, limit, or schedule can only be removed by the parent who set it — your child can manage their own self-set rules, but not yours.</p>
+      </details>
+      <details>
+        <summary>Can my child unlink from me or link to someone else instead?</summary>
+        <p>No. Only the parent can end an active link, and a child already linked to a parent can't accept a second invite — closing the obvious way around oversight.</p>
+      </details>
+      <details>
+        <summary>Does this work the same on iOS and Android?</summary>
+        <p>Android supports the full set of controls. On iOS, linking and monitoring work within what Apple's platform exposes to any app — some device-level restrictions aren't available there to us or anyone else.</p>
+      </details>
+      <details>
+        <summary>Does it cost extra per child?</summary>
+        <p>No — one family subscription covers every child you link, no per-child billing.</p>
+      </details>
+      <details>
+        <summary>What if my child uninstalls the app or clears its data?</summary>
+        <p>Almost everything — block state, your restrictions, the family link itself — lives on our servers, not on the phone. Clearing app data or reinstalling and signing back in re-applies everything exactly as you set it. If you've turned on the strongest protection tier (above), uninstalling isn't possible at all — the app is greyed out in the OS's own app settings. Without it, uninstalling and never signing back in is a real gap, same as with any app that isn't locked down that way.</p>
+      </details>
+      <details>
+        <summary>Can I stop new apps from being installed without my approval?</summary>
+        <p>Yes — turning on install lock (part of the strongest protection tier) blocks new app installs on the child's phone until you turn it back off. It's a separate switch from the uninstall/force-stop lock, so you can use either on its own.</p>
+      </details>
+      <details>
+        <summary>What about a factory reset?</summary>
+        <p>A factory reset removes any app, including ours, and that's true even with the strongest protection tier turned on — deliberately. No app on the market can prevent a factory reset, and we didn't try to; it also means you always keep the ability to factory-reset a phone you own.</p>
+      </details>
     </div>
   </section>
 

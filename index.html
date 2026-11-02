@@ -185,6 +185,18 @@ section.alt { background: var(--surface-2); }
 @media (max-width: 560px) { .parent-banner { flex-direction: column; padding: 24px; } }
 
 /* Footer */
+/* FAQ */
+.faq { max-width: 720px; margin: 0 auto; display: grid; gap: 12px; }
+.faq details { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 4px 20px; }
+.faq summary {
+  cursor: pointer; font-weight: 700; font-size: 0.98rem; padding: 16px 0; list-style: none;
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-size: 1.3rem; color: var(--muted); flex: 0 0 auto; }
+.faq details[open] summary::after { content: "\2212"; }
+.faq details p { margin: 0 0 16px; color: var(--text-2); font-size: 0.92rem; }
+
 footer.site { border-top: 1px solid var(--border); padding: 40px 24px 32px; }
 footer.site .row { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center; max-width: 1080px; margin: 0 auto; }
 footer.site .links { display: flex; gap: 22px; flex-wrap: wrap; }
@@ -205,6 +217,7 @@ footer.site .copy { color: var(--muted); font-size: 0.82rem; }
       <a href="#features">Features</a>
       <a href="#how">How it works</a>
       <a href="parental.html">For Parents</a>
+      <a href="#faq">FAQ</a>
       <a href="#privacy">Privacy</a>
     </nav>
     <a class="cta-small" href="#download">Download</a>
@@ -334,6 +347,43 @@ footer.site .copy { color: var(--muted); font-size: 0.82rem; }
         to anyone else holding your phone, and notifications never say anything
         specific enough to reveal what the app is for.
       </p>
+    </div>
+  </section>
+
+  <section class="alt" id="faq">
+    <div class="section-head">
+      <div class="kicker">Questions</div>
+      <h2>Frequently asked</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Is Unashamed free?</summary>
+        <p>Signing up includes a free trial. After that, it's a subscription billed through the App Store or Google Play — no separate account or card details needed anywhere else.</p>
+      </details>
+      <details>
+        <summary>Can I just turn blocking off whenever I want?</summary>
+        <p>Not instantly. Blocking is controlled from our servers, not a local toggle, and disabling it takes a real 24-hour waiting period — friction that's there on purpose, for the moment it's hardest to want it off.</p>
+      </details>
+      <details>
+        <summary>Will anyone find out what the app is for?</summary>
+        <p>Notifications are kept generic (e.g. "Check-in reminder"), community features use anonymous handles by default, and a local PIN or biometric lock keeps the app closed to anyone else holding your phone.</p>
+      </details>
+      <details>
+        <summary>What happens if I have a bad day?</summary>
+        <p>You reset and keep going. We don't use words like "failure" or "relapse," and a hard day doesn't erase your progress or get flagged to anyone.</p>
+      </details>
+      <details>
+        <summary>Is the community a public feed?</summary>
+        <p>No. You're matched into a small, moderated circle of 5–10 people, with reporting and moderation built in from day one — not an open timeline.</p>
+      </details>
+      <details>
+        <summary>Is professional coaching or therapy available?</summary>
+        <p>It's on the roadmap as the next layer beyond self-guided tools and peer support. Not available yet — we'll announce it here when it is.</p>
+      </details>
+      <details>
+        <summary>Which platforms does it support?</summary>
+        <p>iOS and Android, both as native apps — not a web app or browser extension.</p>
+      </details>
     </div>
   </section>
 
