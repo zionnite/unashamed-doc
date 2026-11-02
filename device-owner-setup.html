@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Device Owner Setup — Unashamed</title>
+<meta name="description" content="Scan this QR code during a freshly factory-reset Android phone's setup to provision Unashamed's strongest tamper-protection tier.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="app-icon.png" type="image/png">
+<style>
+  /* layout: centered single-column card, QR as the focal object */
+  :root {
+    --bg: #F6F5F2;
+    --surface: #FFFFFF;
+    --border: #E4E1D9;
+    --ink: #1C1E1B;
+    --muted: #6B6A62;
+    --accent: #15754F;
+    --accent-ink: #0A3B28;
+    --warn-bg: #FBF0DC;
+    --warn-ink: #7A5B10;
+    --mono-bg: #F0EFEA;
+    color-scheme: light;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15171A;
+      --surface: #1E2124;
+      --border: #30343A;
+      --ink: #EDEBE4;
+      --muted: #9A988F;
+      --accent: #4FBF93;
+      --accent-ink: #BFEFDC;
+      --warn-bg: #3A2E14;
+      --warn-ink: #E8C577;
+      --mono-bg: #26292D;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15171A;
+    --surface: #1E2124;
+    --border: #30343A;
+    --ink: #EDEBE4;
+    --muted: #9A988F;
+    --accent: #4FBF93;
+    --accent-ink: #BFEFDC;
+    --warn-bg: #3A2E14;
+    --warn-ink: #E8C577;
+    --mono-bg: #26292D;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-block: 40px;
+  }
+  .wrap { width: 100%; max-width: 480px; }
+
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    margin: 0 0 6px;
+  }
+  h1 {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin: 0 0 8px;
+    text-wrap: balance;
+  }
+  .sub {
+    color: var(--muted);
+    font-size: 14.5px;
+    line-height: 1.5;
+    margin: 0 0 28px;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 28px;
+    margin-bottom: 20px;
+  }
+  .qr-frame {
+    background: #FFFFFF;
+    border-radius: 14px;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+  }
+  .qr-frame img {
+    width: 100%;
+    max-width: 320px;
+    display: block;
+    image-rendering: pixelated;
+  }
+
+  ol {
+    margin: 0;
+    padding-left: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  ol li {
+    font-size: 14.5px;
+    line-height: 1.5;
+  }
+  ol li b { color: var(--ink); }
+  ol li .note {
+    display: block;
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 2px;
+  }
+
+  .warn {
+    background: var(--warn-bg);
+    color: var(--warn-ink);
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  details {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 16px;
+  }
+  summary {
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--muted);
+  }
+  .kv {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .kv .k {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    margin-bottom: 3px;
+  }
+  .kv .v {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 12.5px;
+    word-break: break-all;
+    background: var(--mono-bg);
+    border-radius: 8px;
+    padding: 8px 10px;
+  }
+  .back { display: inline-block; color: var(--muted); font-size: 13px; text-decoration: none; margin-bottom: 18px; }
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
+</head>
+<body>
+
+<div class="wrap">
+  <a class="back" href="parental.html">&larr; Back to Parental Oversight</a>
+  <p class="eyebrow">Unashamed &middot; Parental oversight</p>
+  <h1>Scan to set up tamper protection</h1>
+  <p class="sub">This QR code sets a child's phone up as Device Owner &mdash; the strongest protection tier, where the app can't be Force Stopped or uninstalled without a linked parent's approval.</p>
+
+  <div class="card">
+    <div class="qr-frame">
+      <img src="data:image/png;base64,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" alt="Device Owner provisioning QR code">
+    </div>
+  </div>
+
+  <div class="warn">This completely erases the phone before anything else happens &mdash; make absolutely sure it's your child's phone, not yours, before you scan. There's no undo once the reset starts.</div>
+
+  <div class="card">
+    <ol>
+      <li><b>Factory reset the phone.</b><span class="note">Settings &rarr; System &rarr; Reset options &rarr; Erase all data. Everything on it is erased.</span></li>
+      <li><b>At the very first Welcome screen, tap the same spot 6 times in a row.</b><span class="note">This opens Android's built-in QR provisioning scanner &mdash; a standard OS feature.</span></li>
+      <li><b>Connect to WiFi if asked.</b><span class="note">Needed to download the app.</span></li>
+      <li><b>Scan the QR code above</b> with the phone's camera.</li>
+      <li><b>Let it finish</b> &mdash; it downloads, verifies, installs, and provisions automatically.</li>
+      <li><b>Open Unashamed and sign in</b> as your child's account to confirm protection is active.</li>
+    </ol>
+  </div>
+
+  <details>
+    <summary>Raw payload (for debugging)</summary>
+    <div class="kv">
+      <div>
+        <div class="k">Admin component</div>
+        <div class="v">ng.com.unashamed/ng.com.unashamed.UnashamedDeviceOwnerReceiver</div>
+      </div>
+      <div>
+        <div class="k">Download location</div>
+        <div class="v">https://joons-me.com/unashamed-device-owner-setup.apk</div>
+      </div>
+      <div>
+        <div class="k">Signature checksum (SHA-256, base64url)</div>
+        <div class="v">tBP128jioJvVCoK72kR7PbE2M29dFtE03bHnMGzgttw</div>
+      </div>
+    </div>
+  </details>
+</div>
+
+</body></html>
