@@ -123,6 +123,10 @@ section.alt { background: var(--surface-2); }
 .card p { color: var(--text-2); font-size: 0.92rem; margin: 0; }
 
 /* Steps */
+.section-sub { max-width: 700px; margin: 0 auto 36px; }
+.section-sub:last-child { margin-bottom: 0; }
+.section-sub h3 { font-size: 1.05rem; margin: 0 0 14px; display: flex; align-items: center; gap: 8px; }
+.platform-icon { width: 20px; height: 20px; flex: 0 0 auto; }
 .steps { max-width: 700px; margin: 0 auto; display: grid; gap: 18px; }
 .step { display: flex; gap: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px; align-items: flex-start; }
 .step .num {
@@ -155,7 +159,8 @@ section.alt { background: var(--surface-2); }
   border: 1px solid rgba(255,255,255,0.35); border-radius: 12px; padding: 12px 20px;
   text-decoration: none; color: #fff;
 }
-.store-badge .glyph { font-size: 22px; }
+.store-badge .glyph { font-size: 22px; display: flex; }
+.store-badge .glyph svg { width: 22px; height: 22px; }
 .store-badge .label { text-align: left; line-height: 1.25; }
 .store-badge .label .small { display: block; font-size: 0.68rem; opacity: 0.8; }
 .store-badge .label .big { display: block; font-size: 0.98rem; font-weight: 700; }
@@ -271,19 +276,49 @@ footer.site .copy { color: var(--muted); font-size: 0.82rem; text-align: center;
       <h2>The strongest protection, and what it takes to turn on</h2>
       <p>This is a deliberate, one-time extra step — not something that's on by default for every linked child.</p>
     </div>
-    <div class="steps">
-      <div class="step">
-        <div class="num">🤖</div>
-        <div>
-          <h3>Android</h3>
-          <p>Set the phone up fresh through a short factory-reset-and-scan step during device setup. Once done, Force Stop and Uninstall are genuinely greyed out by Android itself — confirmed on real hardware, not just in settings.</p>
+    <div class="section-sub">
+      <h3><svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24c-1.64-.75-3.49-1.7-5.47-1.7-1.9 0-3.75.95-5.41 1.7L3.71 5.67c-.17-.28-.53-.37-.82-.22-.3.16-.42.54-.26.85L4.44 9.48C2.4 10.4 1 12.26 1 14.5v.5c0 2.76 2.24 5 5 5h12c2.76 0 5-2.24 5-5v-.5c0-2.24-1.4-4.1-3.4-5.02zM7 15.5c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm10 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg> Android</h3>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <div>
+            <p>This tier is set up once, at the start — when a phone is first being configured for your child, not something you flip on a phone already in daily use.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <div>
+            <p>It involves a factory reset and scanning a one-time QR code during the device's initial setup screens, which provisions Unashamed as the phone's device owner at the operating-system level.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <div>
+            <p>From then on, Force Stop and Uninstall are greyed out by Android itself for this app — confirmed on real hardware, not just a setting inside the app — and install-lock can be turned on as a separate switch.</p>
+          </div>
         </div>
       </div>
-      <div class="step">
-        <div class="num">🍎</div>
-        <div>
-          <h3>iPhone</h3>
-          <p>Requires the child's device to already be set up as a child account under your Apple ID (Family Sharing), using your Screen Time passcode to authorize it. The app can then block its own deletion and new installs the same way.</p>
+    </div>
+    <div class="section-sub">
+      <h3><svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.06 2.09-.985 3.935-.985 1.831 0 2.35.985 3.96.954 1.637-.03 2.654-1.48 3.667-2.934 1.126-1.68 1.592-3.278 1.613-3.364-.038-.028-3.094-1.223-3.094-4.837 0-3.075 2.512-4.531 2.635-4.608-1.454-2.134-3.696-2.372-4.48-2.405-1.99-.149-3.655 1.078-4.626 1.078zm3.34-3.045c.863-1.044 1.445-2.49 1.284-3.937-1.246.05-2.75.835-3.645 1.878-.806.907-1.516 2.387-1.333 3.792 1.372.108 2.771-.69 3.694-1.733z"/></svg> iPhone</h3>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <div>
+            <p>The child's iPhone needs to already be set up as a child account under your Apple ID through Family Sharing — done in Apple's own Settings app, a prerequisite Unashamed doesn't set up itself.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <div>
+            <p>When setting up Unashamed on the child's phone, choose that it's for your child when asked, then confirm with your Screen Time passcode.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <div>
+            <p>That turns on both the deletion lock and the install lock at once; either can later be turned off independently, but only from your side, not the child's.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -382,11 +417,11 @@ footer.site .copy { color: var(--muted); font-size: 0.82rem; text-align: center;
       <p>Download Unashamed, then invite your child from the Family tab to get started.</p>
       <div class="store-row">
         <a class="store-badge" href="https://apps.apple.com/app/unashamed/id6812513399">
-          <span class="glyph"></span>
+          <span class="glyph"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.06 2.09-.985 3.935-.985 1.831 0 2.35.985 3.96.954 1.637-.03 2.654-1.48 3.667-2.934 1.126-1.68 1.592-3.278 1.613-3.364-.038-.028-3.094-1.223-3.094-4.837 0-3.075 2.512-4.531 2.635-4.608-1.454-2.134-3.696-2.372-4.48-2.405-1.99-.149-3.655 1.078-4.626 1.078zm3.34-3.045c.863-1.044 1.445-2.49 1.284-3.937-1.246.05-2.75.835-3.645 1.878-.806.907-1.516 2.387-1.333 3.792 1.372.108 2.771-.69 3.694-1.733z"/></svg></span>
           <span class="label"><span class="small">Download on the</span><span class="big">App Store</span></span>
         </a>
         <a class="store-badge" href="https://play.google.com/store/apps/details?id=ng.com.unashamed">
-          <span class="glyph">▶</span>
+          <span class="glyph"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M3.609 1.814L13.792 12 3.61 22.186a4.5 4.5 0 0 1-.61-2.187V3.999c0-.812.254-1.567.609-2.185z"/><path fill="#EA4335" d="M13.792 12L3.61 1.814A4.46 4.46 0 0 1 5.78 1l10.831 6.342L13.792 12z"/><path fill="#FBBC04" d="M16.611 7.342L20.635 9.7c.831.512 1.371 1.295 1.371 2.169v.001c0 .873-.54 1.657-1.371 2.169l-4.024 2.358-3.819-4.397 3.819-4.658z"/><path fill="#34A853" d="M13.792 12l2.819 4.397L5.78 23a4.46 4.46 0 0 1-2.17-.814L13.792 12z"/></svg></span>
           <span class="label"><span class="small">Get it on</span><span class="big">Google Play</span></span>
         </a>
       </div>

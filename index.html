@@ -165,7 +165,8 @@ section.alt { background: var(--surface-2); }
   border: 1px solid rgba(255,255,255,0.35); border-radius: 12px; padding: 12px 20px;
   text-decoration: none; color: #fff;
 }
-.store-badge .glyph { font-size: 22px; }
+.store-badge .glyph { font-size: 22px; display: flex; }
+.store-badge .glyph svg { width: 22px; height: 22px; }
 .store-badge .label { text-align: left; line-height: 1.25; }
 .store-badge .label .small { display: block; font-size: 0.68rem; opacity: 0.8; }
 .store-badge .label .big { display: block; font-size: 0.98rem; font-weight: 700; }
@@ -393,11 +394,11 @@ footer.site .copy { color: var(--muted); font-size: 0.82rem; }
       <p>Available now on iOS and Android, with a free trial included.</p>
       <div class="store-row">
         <a class="store-badge" href="https://apps.apple.com/app/unashamed/id6812513399">
-          <span class="glyph"></span>
+          <span class="glyph"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.06 2.09-.985 3.935-.985 1.831 0 2.35.985 3.96.954 1.637-.03 2.654-1.48 3.667-2.934 1.126-1.68 1.592-3.278 1.613-3.364-.038-.028-3.094-1.223-3.094-4.837 0-3.075 2.512-4.531 2.635-4.608-1.454-2.134-3.696-2.372-4.48-2.405-1.99-.149-3.655 1.078-4.626 1.078zm3.34-3.045c.863-1.044 1.445-2.49 1.284-3.937-1.246.05-2.75.835-3.645 1.878-.806.907-1.516 2.387-1.333 3.792 1.372.108 2.771-.69 3.694-1.733z"/></svg></span>
           <span class="label"><span class="small">Download on the</span><span class="big">App Store</span></span>
         </a>
         <a class="store-badge" href="https://play.google.com/store/apps/details?id=ng.com.unashamed">
-          <span class="glyph">▶</span>
+          <span class="glyph"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M3.609 1.814L13.792 12 3.61 22.186a4.5 4.5 0 0 1-.61-2.187V3.999c0-.812.254-1.567.609-2.185z"/><path fill="#EA4335" d="M13.792 12L3.61 1.814A4.46 4.46 0 0 1 5.78 1l10.831 6.342L13.792 12z"/><path fill="#FBBC04" d="M16.611 7.342L20.635 9.7c.831.512 1.371 1.295 1.371 2.169v.001c0 .873-.54 1.657-1.371 2.169l-4.024 2.358-3.819-4.397 3.819-4.658z"/><path fill="#34A853" d="M13.792 12l2.819 4.397L5.78 23a4.46 4.46 0 0 1-2.17-.814L13.792 12z"/></svg></span>
           <span class="label"><span class="small">Get it on</span><span class="big">Google Play</span></span>
         </a>
       </div>
