@@ -3,13 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Unashamed — Legal &amp; Privacy</title>
+<title>Unashamed — Quit porn, without the shame</title>
+<meta name="description" content="Unashamed helps you step away from compulsive pornography use through tools you control, a small accountable circle, and blocking that's actually hard to work around. No shame, no streak-shaming, no judgment.">
 <style>
 :root {
   --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
   --bg: #FAF8F3;
   --surface: #FFFFFF;
+  --surface-2: #F3EFE6;
   --border: #E7E1D3;
   --text: #20261F;
   --text-2: #4A4A40;
@@ -24,6 +26,7 @@
   :root {
     --bg: #12140F;
     --surface: #1A1D16;
+    --surface-2: #23271D;
     --border: #333726;
     --text: #EDEBE1;
     --text-2: #C3C0B2;
@@ -35,59 +38,339 @@
   }
 }
 * { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; height: 100%; }
+html, body { margin: 0; padding: 0; }
 body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-body);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 24px;
 }
-.wrap { max-width: 480px; width: 100%; text-align: center; }
-.badge {
-  width: 56px; height: 56px; margin: 0 auto 20px; border-radius: 50%;
+a { color: var(--link); }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+/* Header */
+header.site {
+  position: sticky; top: 0; z-index: 10;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+header.site .bar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 24px;
+}
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.05rem; color: var(--text); text-decoration: none; }
+.brand .mark {
+  width: 32px; height: 32px; border-radius: 9px;
   background: linear-gradient(135deg, var(--primary), var(--primary-d));
+  color: var(--accent); display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+}
+nav.links { display: flex; gap: 28px; }
+nav.links a { color: var(--text-2); text-decoration: none; font-size: 0.92rem; font-weight: 600; }
+nav.links a:hover { color: var(--text); }
+.cta-small {
+  background: var(--primary); color: #fff; border-radius: 10px; padding: 9px 16px;
+  font-weight: 700; font-size: 0.88rem; text-decoration: none; white-space: nowrap;
+}
+
+/* Hero */
+.hero { padding: 72px 24px 56px; text-align: center; }
+.hero .eyebrow {
+  display: inline-block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em;
+  text-transform: uppercase; color: var(--primary); background: var(--surface-2);
+  border: 1px solid var(--border); border-radius: 999px; padding: 6px 14px; margin-bottom: 22px;
+}
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.1rem); line-height: 1.12; font-weight: 800;
+  letter-spacing: -0.02em; margin: 0 0 18px; max-width: 760px; margin-inline: auto;
+}
+.hero h1 .accent { color: var(--primary); }
+.hero p.lede {
+  color: var(--text-2); font-size: 1.1rem; max-width: 560px; margin: 0 auto 32px;
+}
+.cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 14px; }
+.cta-primary {
+  background: var(--primary); color: #fff; border-radius: 12px; padding: 14px 26px;
+  font-weight: 700; font-size: 1rem; text-decoration: none; display: inline-block;
+}
+.cta-secondary {
+  background: transparent; color: var(--text); border: 1px solid var(--border); border-radius: 12px;
+  padding: 14px 26px; font-weight: 700; font-size: 1rem; text-decoration: none; display: inline-block;
+}
+.hero .note { color: var(--muted); font-size: 0.85rem; }
+
+/* Trust strip */
+.trust {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 28px; color: var(--muted);
+  font-size: 0.85rem; font-weight: 600; padding: 0 24px 64px;
+}
+.trust span { display: flex; align-items: center; gap: 7px; }
+
+/* Sections */
+section { padding: 64px 24px; }
+section.alt { background: var(--surface-2); }
+.section-head { text-align: center; max-width: 620px; margin: 0 auto 44px; }
+.section-head .kicker {
+  color: var(--primary); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 10px;
+}
+.section-head h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin: 0 0 12px; letter-spacing: -0.01em; }
+.section-head p { color: var(--text-2); margin: 0; }
+
+/* Feature grid */
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1080px; margin: 0 auto; }
+@media (max-width: 860px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+.card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px;
+}
+.card .icon {
+  width: 42px; height: 42px; border-radius: 11px; background: var(--surface-2); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 14px;
+}
+.card h3 { font-size: 1.04rem; margin: 0 0 8px; }
+.card p { color: var(--text-2); font-size: 0.92rem; margin: 0; }
+
+/* How it works */
+.steps { max-width: 760px; margin: 0 auto; display: grid; gap: 18px; }
+.step { display: flex; gap: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px; align-items: flex-start; }
+.step .num {
+  flex: 0 0 auto; width: 30px; height: 30px; border-radius: 50%; background: var(--primary); color: #fff;
+  display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem;
+}
+.step h3 { margin: 0 0 4px; font-size: 1rem; }
+.step p { margin: 0; color: var(--text-2); font-size: 0.9rem; }
+
+/* Quote / reassurance */
+.reassure {
+  max-width: 640px; margin: 0 auto; text-align: center; background: var(--surface);
+  border: 1px solid var(--border); border-radius: 18px; padding: 40px 32px;
+}
+.reassure p.big { font-size: 1.25rem; font-weight: 700; margin: 0 0 10px; letter-spacing: -0.01em; }
+.reassure p.small { color: var(--text-2); margin: 0; font-size: 0.95rem; }
+
+/* Final CTA */
+.final-cta {
+  max-width: 680px; margin: 0 auto; text-align: center; background: linear-gradient(135deg, var(--primary), var(--primary-d));
+  border-radius: 22px; padding: 52px 32px; color: #fff;
+}
+.final-cta h2 { margin: 0 0 12px; font-size: clamp(1.5rem, 3vw, 2rem); }
+.final-cta p { margin: 0 0 26px; opacity: 0.92; }
+.final-cta .cta-primary { background: #fff; color: var(--primary-d); }
+.final-cta .note { color: rgba(255,255,255,0.75); margin-top: 16px; font-size: 0.85rem; }
+.store-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.store-badge {
+  display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.35); border-radius: 12px; padding: 12px 20px;
+  text-decoration: none; color: #fff;
+}
+.store-badge .glyph { font-size: 22px; }
+.store-badge .label { text-align: left; line-height: 1.25; }
+.store-badge .label .small { display: block; font-size: 0.68rem; opacity: 0.8; }
+.store-badge .label .big { display: block; font-size: 0.98rem; font-weight: 700; }
+
+/* For Parents banner */
+.parent-banner {
+  display: flex; gap: 26px; align-items: flex-start; max-width: 760px; margin: 0 auto;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 32px;
+}
+.parent-banner .icon {
+  flex: 0 0 auto; width: 52px; height: 52px; border-radius: 14px; font-size: 24px;
+  background: var(--surface-2); border: 1px solid var(--border);
   display: flex; align-items: center; justify-content: center;
-  color: var(--accent); font-size: 26px;
 }
-h1 { font-size: 1.7rem; font-weight: 800; margin: 0 0 10px; letter-spacing: -0.02em; }
-p.lede { color: var(--text-2); margin: 0 0 32px; font-size: 0.98rem; }
+.parent-banner h3 { margin: 0 0 8px; font-size: 1.1rem; }
+.parent-banner p { margin: 0 0 16px; color: var(--text-2); font-size: 0.95rem; }
+@media (max-width: 560px) { .parent-banner { flex-direction: column; padding: 24px; } }
 
-.links { display: grid; gap: 12px; text-align: left; }
-.links a {
-  display: block; background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
-  padding: 16px 18px; text-decoration: none; color: var(--text);
-}
-.links a .name { font-weight: 700; font-size: 1rem; }
-.links a .desc { color: var(--muted); font-size: 0.85rem; margin-top: 3px; }
-
-footer { margin-top: 36px; font-size: 0.82rem; color: var(--muted); }
-footer a { color: var(--muted); }
+/* Footer */
+footer.site { border-top: 1px solid var(--border); padding: 40px 24px 32px; }
+footer.site .row { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center; max-width: 1080px; margin: 0 auto; }
+footer.site .links { display: flex; gap: 22px; flex-wrap: wrap; }
+footer.site .links a { color: var(--muted); text-decoration: none; font-size: 0.85rem; }
+footer.site .links a:hover { color: var(--text-2); }
+footer.site .copy { color: var(--muted); font-size: 0.82rem; }
 </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="badge">🌱</div>
-    <h1>Unashamed</h1>
-    <p class="lede">Legal and privacy information for the Unashamed app.</p>
-    <div class="links">
-      <a href="privacy.html">
-        <div class="name">Privacy Policy</div>
-        <div class="desc">What we collect, why, and who can see it.</div>
-      </a>
-      <a href="data-request.html">
-        <div class="name">Data Requests</div>
-        <div class="desc">Access, export, or delete your account and data.</div>
-      </a>
-    </div>
-    <footer>
-      <p>Questions? <a href="mailto:unashamedapp@gmail.com">unashamedapp@gmail.com</a></p>
-    </footer>
+
+<header class="site">
+  <div class="bar">
+    <a class="brand" href="#top">
+      <span class="mark">🌱</span>
+      Unashamed
+    </a>
+    <nav class="links">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="parental.html">For Parents</a>
+      <a href="#privacy">Privacy</a>
+    </nav>
+    <a class="cta-small" href="#download">Download</a>
   </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <span class="eyebrow">Available on iOS &amp; Android</span>
+    <h1>Step away from porn, <span class="accent">without the shame.</span></h1>
+    <p class="lede">
+      Unashamed pairs real blocking you can't just switch off with tools that
+      help on the hard days — no guilt trips, no "you failed" messaging, just
+      a reset button and a way forward.
+    </p>
+    <div class="cta-row">
+      <a class="cta-primary" href="#download">Download the app</a>
+      <a class="cta-secondary" href="#features">See how it works</a>
+    </div>
+    <p class="note">Free trial included when you sign up.</p>
+  </section>
+
+  <div class="trust">
+    <span>🔒 Server-enforced blocking</span>
+    <span>🙈 Anonymous by default</span>
+    <span>🚫 No shame-based language, anywhere</span>
+  </div>
+
+  <section id="features">
+    <div class="section-head">
+      <div class="kicker">What's inside</div>
+      <h2>Built around how change actually happens</h2>
+      <p>Not a filter you forget about. Not a shame spiral disguised as an app.</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <div class="icon">🛡️</div>
+        <h3>Blocking that holds</h3>
+        <p>Filtering runs at the network level and is controlled from our servers, not local settings you can quietly toggle off in a weak moment.</p>
+      </div>
+      <div class="card">
+        <div class="icon">⏱️</div>
+        <h3>A 24-hour pause on disabling it</h3>
+        <p>Turning blocking off takes a real waiting period, not a single tap — the same friction that makes it useful in the moment it's hardest to want.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🆘</div>
+        <h3>Panic button, for right now</h3>
+        <p>One tap for grounding tools and a next step when an urge hits — built for the moment itself, not a lecture after.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📓</div>
+        <h3>A trigger journal, not a confession booth</h3>
+        <p>Track what led up to a hard moment so patterns get clearer over time — private, and never framed as an admission of guilt.</p>
+      </div>
+      <div class="card">
+        <div class="icon">👥</div>
+        <h3>Small, moderated circles</h3>
+        <p>5–10 people, not an open feed. Anonymous handles by default, with real moderation and reporting from day one.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🔁</div>
+        <h3>Resets, not "relapses"</h3>
+        <p>A hard day doesn't erase your progress or get branded a failure. You reset and keep going — that's the whole design.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="how">
+    <div class="section-head">
+      <div class="kicker">How it works</div>
+      <h2>Three layers, working together</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <div>
+          <h3>Self-guided tools from day one</h3>
+          <p>Streaks, check-ins, a panic button, and a trigger journal — things you control, available the moment you sign up.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <div>
+          <h3>A circle that actually has your back</h3>
+          <p>Get matched into a small, moderated group, or pair with an accountability partner — support without turning your recovery into a public feed.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <div>
+          <h3>Professional support, when you want it</h3>
+          <p>A path to real coaching and therapist support as the next layer, for anyone who wants to go beyond self-guided and peer tools.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="parents">
+    <div class="section-head">
+      <div class="kicker">For families</div>
+      <h2>Parental oversight, without spyware</h2>
+      <p>For parents who want to help a child build healthier habits, not secretly surveil them.</p>
+    </div>
+    <div class="parent-banner">
+      <div class="icon">👨‍👩‍👧</div>
+      <div>
+        <h3>Linked, not snooped on</h3>
+        <p>
+          Parent and child link by invite, not a hidden install. Once linked,
+          a parent can set app limits, screen time, bedtime blocks, and a
+          study timetable remotely — restrictions the child can see but can't
+          quietly switch off. One family plan covers every linked child.
+        </p>
+        <a class="cta-secondary" href="parental.html">See how parental oversight works →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <div class="reassure">
+      <p class="big">Your identity stays yours.</p>
+      <p class="small">
+        Community features use anonymous handles by default — a profile photo is
+        optional, never required. A local PIN or biometric lock keeps the app closed
+        to anyone else holding your phone, and notifications never say anything
+        specific enough to reveal what the app is for.
+      </p>
+    </div>
+  </section>
+
+  <section id="download">
+    <div class="final-cta">
+      <h2>Get Unashamed</h2>
+      <p>Available now on iOS and Android, with a free trial included.</p>
+      <div class="store-row">
+        <a class="store-badge" href="https://apps.apple.com/app/unashamed/id6812513399">
+          <span class="glyph"></span>
+          <span class="label"><span class="small">Download on the</span><span class="big">App Store</span></span>
+        </a>
+        <a class="store-badge" href="https://play.google.com/store/apps/details?id=ng.com.unashamed">
+          <span class="glyph">▶</span>
+          <span class="label"><span class="small">Get it on</span><span class="big">Google Play</span></span>
+        </a>
+      </div>
+      <p class="note">Questions first? Email us at unashamedapp@gmail.com</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="row">
+    <a class="brand" href="#top">
+      <span class="mark">🌱</span>
+      Unashamed
+    </a>
+    <div class="links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="data-request.html">Data Requests</a>
+      <a href="mailto:unashamedapp@gmail.com">Contact</a>
+    </div>
+  </div>
+  <p class="copy" style="text-align:center; margin-top:20px;">© 2026 Unashamed. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
