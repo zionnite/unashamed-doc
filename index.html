@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Unashamed — Quit porn, without the shame</title>
 <meta name="description" content="Unashamed helps you step away from compulsive pornography use through tools you control, a small accountable circle, and blocking that's actually hard to work around. No shame, no streak-shaming, no judgment.">
+<link rel="icon" href="app-icon.png" type="image/png">
+<link rel="apple-touch-icon" href="app-icon.png">
 <style>
 :root {
   --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -61,12 +63,7 @@ header.site .bar {
   padding: 16px 24px;
 }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.05rem; color: var(--text); text-decoration: none; }
-.brand .mark {
-  width: 32px; height: 32px; border-radius: 9px;
-  background: linear-gradient(135deg, var(--primary), var(--primary-d));
-  color: var(--accent); display: flex; align-items: center; justify-content: center;
-  font-size: 16px;
-}
+.brand .mark { width: 32px; height: 32px; display: block; object-fit: contain; }
 nav.links { display: flex; gap: 28px; }
 nav.links a { color: var(--text-2); text-decoration: none; font-size: 0.92rem; font-weight: 600; }
 nav.links a:hover { color: var(--text); }
@@ -211,7 +208,7 @@ footer.site .copy { color: var(--muted); font-size: 0.82rem; }
 <header class="site">
   <div class="bar">
     <a class="brand" href="#top">
-      <span class="mark">🌱</span>
+      <img class="mark" src="app-icon.png" alt="Unashamed logo">
       Unashamed
     </a>
     <nav class="links">
@@ -411,7 +408,7 @@ footer.site .copy { color: var(--muted); font-size: 0.82rem; }
 <footer class="site">
   <div class="row">
     <a class="brand" href="#top">
-      <span class="mark">🌱</span>
+      <img class="mark" src="app-icon.png" alt="Unashamed logo">
       Unashamed
     </a>
     <div class="links">
